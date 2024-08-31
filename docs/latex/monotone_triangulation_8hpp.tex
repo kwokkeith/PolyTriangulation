@@ -1,0 +1,44 @@
+\hypertarget{monotone_triangulation_8hpp}{}\doxysection{src/monotone\+Triangulation.hpp File Reference}
+\label{monotone_triangulation_8hpp}\index{src/monotoneTriangulation.hpp@{src/monotoneTriangulation.hpp}}
+{\ttfamily \#include \char`\"{}D\+C\+E\+L.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \mbox{\hyperlink{monotone_triangulation_8hpp_a99e8ed0941479757edfb577ebe8d1061}{monotone\+Triangulation}} (\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel)
+\item 
+void \mbox{\hyperlink{monotone_triangulation_8hpp_acaf12eecddbc895e2da9b01ac65dd008}{face\+Triangulation}} (\mbox{\hyperlink{class_face}{Face}} \&face, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{monotone_triangulation_8hpp_acaf12eecddbc895e2da9b01ac65dd008}\label{monotone_triangulation_8hpp_acaf12eecddbc895e2da9b01ac65dd008}} 
+\index{monotoneTriangulation.hpp@{monotoneTriangulation.hpp}!faceTriangulation@{faceTriangulation}}
+\index{faceTriangulation@{faceTriangulation}!monotoneTriangulation.hpp@{monotoneTriangulation.hpp}}
+\doxysubsubsection{\texorpdfstring{faceTriangulation()}{faceTriangulation()}}
+{\footnotesize\ttfamily void face\+Triangulation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_face}{Face}} \&}]{face,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to triangulate a face of monotone partitioned polygon (single monotone polygon) 
+\begin{DoxyParams}{Parameters}
+{\em face} & \mbox{\hyperlink{class_face}{Face}} which is to be triangulated \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} to which face belongs \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonal are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{monotone_triangulation_8hpp_a99e8ed0941479757edfb577ebe8d1061}\label{monotone_triangulation_8hpp_a99e8ed0941479757edfb577ebe8d1061}} 
+\index{monotoneTriangulation.hpp@{monotoneTriangulation.hpp}!monotoneTriangulation@{monotoneTriangulation}}
+\index{monotoneTriangulation@{monotoneTriangulation}!monotoneTriangulation.hpp@{monotoneTriangulation.hpp}}
+\doxysubsubsection{\texorpdfstring{monotoneTriangulation()}{monotoneTriangulation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} monotone\+Triangulation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel }\end{DoxyParamCaption})}
+
+A function to triangulate monotone partitioned polygon (with the outer face at index 0) 
+\begin{DoxyParams}{Parameters}
+{\em dcel} & The \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the monotone partitioned polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} that contains triangulated polygon 
+\end{DoxyReturn}

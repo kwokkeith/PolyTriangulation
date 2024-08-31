@@ -1,0 +1,185 @@
+\hypertarget{make_monotone_8cpp}{}\doxysection{src/make\+Monotone.cpp File Reference}
+\label{make_monotone_8cpp}\index{src/makeMonotone.cpp@{src/makeMonotone.cpp}}
+{\ttfamily \#include \char`\"{}make\+Monotone.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_compare_vertices}{Compare\+Vertices}}
+\item 
+class \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}{Vertex\+Type}} \mbox{\hyperlink{make_monotone_8cpp_a2b300be047af16782768d65a78222659}{get\+Vertex\+Type}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_af112099ea7ad5396c973e94d7191adc6}{handle\+Start\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_a0d48cf89729f91f8986ba2f13a004f5a}{handle\+End\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_ab1b29c0911891d828715269b609708a2}{handle\+Split\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_ab089ddec12e147dc0006d661e12f9b7b}{handle\+Merge\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_a96c2e2018d61c16494c663f34fc38891}{handle\+Regular\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\item 
+void \mbox{\hyperlink{make_monotone_8cpp_a3d14ba8036541d0d967e50d867edb831}{handle\+Vertex}} (\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&event\+\_\+point, \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel, std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&binary\+\_\+search\+\_\+tree, std\+::vector$<$ int $>$ \&helper, std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&diagonals)
+\item 
+\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \mbox{\hyperlink{make_monotone_8cpp_a31a4c0ba0613e4dee1f5892f6ea2c365}{make\+Monotone}} (\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&dcel)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{make_monotone_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}\label{make_monotone_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}} 
+int {\bfseries n}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{make_monotone_8cpp_a2b300be047af16782768d65a78222659}\label{make_monotone_8cpp_a2b300be047af16782768d65a78222659}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!getVertexType@{getVertexType}}
+\index{getVertexType@{getVertexType}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{getVertexType()}{getVertexType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}{Vertex\+Type}} get\+Vertex\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel }\end{DoxyParamCaption})}
+
+A function that returns the type of an event point, i.\+e. Split, End, etc. 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of enum type Vertex\+Type which denotes the type of the vertex 
+\end{DoxyReturn}
+\mbox{\Hypertarget{make_monotone_8cpp_a0d48cf89729f91f8986ba2f13a004f5a}\label{make_monotone_8cpp_a0d48cf89729f91f8986ba2f13a004f5a}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleEndVertex@{handleEndVertex}}
+\index{handleEndVertex@{handleEndVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleEndVertex()}{handleEndVertex()}}
+{\footnotesize\ttfamily void handle\+End\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to handle E\+ND Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonals are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_ab089ddec12e147dc0006d661e12f9b7b}\label{make_monotone_8cpp_ab089ddec12e147dc0006d661e12f9b7b}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleMergeVertex@{handleMergeVertex}}
+\index{handleMergeVertex@{handleMergeVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleMergeVertex()}{handleMergeVertex()}}
+{\footnotesize\ttfamily void handle\+Merge\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to handle M\+E\+R\+GE Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonals are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_a96c2e2018d61c16494c663f34fc38891}\label{make_monotone_8cpp_a96c2e2018d61c16494c663f34fc38891}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleRegularVertex@{handleRegularVertex}}
+\index{handleRegularVertex@{handleRegularVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleRegularVertex()}{handleRegularVertex()}}
+{\footnotesize\ttfamily void handle\+Regular\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to handle R\+E\+G\+U\+L\+AR Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonals are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_ab1b29c0911891d828715269b609708a2}\label{make_monotone_8cpp_ab1b29c0911891d828715269b609708a2}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleSplitVertex@{handleSplitVertex}}
+\index{handleSplitVertex@{handleSplitVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleSplitVertex()}{handleSplitVertex()}}
+{\footnotesize\ttfamily void handle\+Split\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to handle S\+P\+L\+IT Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonals are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_af112099ea7ad5396c973e94d7191adc6}\label{make_monotone_8cpp_af112099ea7ad5396c973e94d7191adc6}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleStartVertex@{handleStartVertex}}
+\index{handleStartVertex@{handleStartVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleStartVertex()}{handleStartVertex()}}
+{\footnotesize\ttfamily void handle\+Start\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper }\end{DoxyParamCaption})}
+
+A function to handle S\+T\+A\+RT Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_a3d14ba8036541d0d967e50d867edb831}\label{make_monotone_8cpp_a3d14ba8036541d0d967e50d867edb831}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!handleVertex@{handleVertex}}
+\index{handleVertex@{handleVertex}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{handleVertex()}{handleVertex()}}
+{\footnotesize\ttfamily void handle\+Vertex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_event_point}{Event\+Point}} \&}]{event\+\_\+point,  }\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel,  }\item[{std\+::set$<$ std\+::pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, int $>$, \mbox{\hyperlink{class_compare_edges}{Compare\+Edges}} $>$ \&}]{binary\+\_\+search\+\_\+tree,  }\item[{std\+::vector$<$ int $>$ \&}]{helper,  }\item[{std\+::vector$<$ std\+::pair$<$ int, int $>$$>$ \&}]{diagonals }\end{DoxyParamCaption})}
+
+A function to handle Vertices of polygon 
+\begin{DoxyParams}{Parameters}
+{\em event\+\_\+point} & the event point \\
+\hline
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon to which the vertex belongs \\
+\hline
+{\em binary\+\_\+search\+\_\+tree} & A B\+ST containing the edges. \\
+\hline
+{\em helper} & A vector which stores the helper of edges using their indices. \\
+\hline
+{\em diagonals} & A vector of diagonals to which new diagonals are added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{make_monotone_8cpp_a31a4c0ba0613e4dee1f5892f6ea2c365}\label{make_monotone_8cpp_a31a4c0ba0613e4dee1f5892f6ea2c365}} 
+\index{makeMonotone.cpp@{makeMonotone.cpp}!makeMonotone@{makeMonotone}}
+\index{makeMonotone@{makeMonotone}!makeMonotone.cpp@{makeMonotone.cpp}}
+\doxysubsubsection{\texorpdfstring{makeMonotone()}{makeMonotone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} make\+Monotone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} \&}]{dcel }\end{DoxyParamCaption})}
+
+Takes the \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of a polygon and returns a \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of its monotone partitioning 
+\begin{DoxyParams}{Parameters}
+{\em dcel} & \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of the polygon (passed by reference) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} of monotone partitioning of polygon 
+\end{DoxyReturn}

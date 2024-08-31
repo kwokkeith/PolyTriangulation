@@ -1,0 +1,102 @@
+\hypertarget{class_point}{}\doxysection{Point Class Reference}
+\label{class_point}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$utils.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_aead8f3bbe5b76955c18c91340636c12c}{Point}} (long double \mbox{\hyperlink{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}{x}}, long double \mbox{\hyperlink{class_point_a9a07458de21d860b9ccdd53a11dcf697}{y}})
+\item 
+\mbox{\hyperlink{class_point_ad92f2337b839a94ce97dcdb439b4325a}{Point}} ()
+\item 
+bool \mbox{\hyperlink{class_point_a94149af943b5f68fa4ffcea61f9658a2}{is\+Below}} (\mbox{\hyperlink{class_point}{Point}} p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}\label{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}} 
+long double \mbox{\hyperlink{class_point_ae5e09abfaf9a7f6a0f00c091a7b61525}{x}}
+\begin{DoxyCompactList}\small\item\em The x coordinate of the \mbox{\hyperlink{class_point}{Point}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_point_a9a07458de21d860b9ccdd53a11dcf697}\label{class_point_a9a07458de21d860b9ccdd53a11dcf697}} 
+long double \mbox{\hyperlink{class_point_a9a07458de21d860b9ccdd53a11dcf697}{y}}
+\begin{DoxyCompactList}\small\item\em The y coordinate of the \mbox{\hyperlink{class_point}{Point}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_point_a0cf123214a96fce04501b0ecfa684382}{counter\+Clockwise}} (\mbox{\hyperlink{class_point}{Point}} p1, \mbox{\hyperlink{class_point}{Point}} p2, \mbox{\hyperlink{class_point}{Point}} p3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Class for a \mbox{\hyperlink{class_point}{Point}} in 2-\/D Space 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_point_aead8f3bbe5b76955c18c91340636c12c}\label{class_point_aead8f3bbe5b76955c18c91340636c12c}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{long double}]{x,  }\item[{long double}]{y }\end{DoxyParamCaption})}
+
+Constructor. Initializes the coordinates to the passed parameters
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate \\
+\hline
+{\em y} & The y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_point_ad92f2337b839a94ce97dcdb439b4325a}\label{class_point_ad92f2337b839a94ce97dcdb439b4325a}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_point_a94149af943b5f68fa4ffcea61f9658a2}\label{class_point_a94149af943b5f68fa4ffcea61f9658a2}} 
+\index{Point@{Point}!isBelow@{isBelow}}
+\index{isBelow@{isBelow}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{isBelow()}{isBelow()}}
+{\footnotesize\ttfamily bool Point\+::is\+Below (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p }\end{DoxyParamCaption})}
+
+Checks if this point is below the point passed as parameter. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The point for which the check is to be made. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if this point is below p. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_point_a0cf123214a96fce04501b0ecfa684382}\label{class_point_a0cf123214a96fce04501b0ecfa684382}} 
+\index{Point@{Point}!counterClockwise@{counterClockwise}}
+\index{counterClockwise@{counterClockwise}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{counterClockwise()}{counterClockwise()}}
+{\footnotesize\ttfamily bool counter\+Clockwise (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{p1,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p2,  }\item[{\mbox{\hyperlink{class_point}{Point}}}]{p3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+Check if 3 points are in counter-\/clockwise order
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & 1st \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+{\em B} & 2nd \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+{\em C} & 3rd \mbox{\hyperlink{class_point}{Point}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the 3 points are in counter-\/clockwise order 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{utils_8hpp}{utils.\+hpp}}\item 
+src/\mbox{\hyperlink{utils_8cpp}{utils.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Test Results Comparison</title>
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="makemonotone.html">Make Monotone</a></li>
+      <li><a href="monotonetriangulation.html">Monotone Triangulation</a></li>
+    </ul>
+    <br />
+    <h1>Polygon Triangulation - Test Results</h1>
+    The Algorithm works pretty well for even large cases (200000 vertices) and
+    is pretty robust. Though it might not work for even larges cases because of
+    stack size limit on operating system (which results in segmentation fault)
+    <h3>Test1</h3>
+    <img src="./test1_polygon.png" />
+    <p>This was just a simple case of 5 points manually created</p>
+    <h3>Test2</h3>
+    <img src="./test2_polygon.png" />
+    <p>A randomly generated polygon with 20 points</p>
+    <h3>Test3</h3>
+    <img src="./test3_polygon.png" />
+    <p>A randomly generated polygon with 200 points</p>
+    <h3>Test4</h3>
+    <img src="./test4_polygon.png" />
+    <p>A randomly generated polygon with 2000 points</p>
+    <h3>Test5</h3>
+    <p>A randomly generated polygon with 200000 points</p>
+    <br />
+
+    <table>
+      <tr>
+        <th>Algorithm</th>
+        <th>Test1</th>
+        <th>Test2</th>
+        <th>Test3</th>
+        <th>Test4</th>
+        <th>Test5</th>
+      </tr>
+      <tr>
+        <th>DCEL Construction</th>
+        <td>2.1e-5 s</td>
+        <td>3.7e-5 s</td>
+        <td>0.000233 s</td>
+        <td>0.006925 s</td>
+        <td>0.15388 s</td>
+        <br />
+      </tr>
+      <tr>
+        <th>Make Monotone</th>
+        <td>7.8e-5 s</td>
+        <td>0.000176 s</td>
+        <td>0.00149 s</td>
+        <td>0.012 s</td>
+        <td>1.47 s</td>
+      </tr>
+      <tr>
+        <th>Monotone Triangulation</th>
+        <td>7.9e-5 s</td>
+        <td>0.000253 s</td>
+        <td>0.00215 s</td>
+        <td>0.020 s</td>
+        <td>2.00 s</td>
+      </tr>
+      <tr>
+        <th>Overall (including i/o)</th>
+        <td>0.000278 s</td>
+        <td>0.00589 s</td>
+        <td>0.00439 s</td>
+        <td>0.043 s</td>
+        <td>3.931 s</td>
+      </tr>
+    </table>
+    <br />
+  </body>
+</html>

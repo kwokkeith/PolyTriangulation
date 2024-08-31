@@ -1,0 +1,65 @@
+\hypertarget{class_half_edge}{}\doxysection{Half\+Edge Class Reference}
+\label{class_half_edge}\index{HalfEdge@{HalfEdge}}
+
+
+{\ttfamily \#include $<$D\+C\+E\+L.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_half_edge_a9694f1dbddb8e3017ab75f5156d11da3}{Half\+Edge}} ()
+\item 
+\mbox{\hyperlink{class_half_edge_a78a1113db76737e8bbfd7dbcfcfbbd99}{Half\+Edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$\mbox{\hyperlink{class_half_edge_a8c90288f66768884f42b0588055eb4bf}{origin}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_half_edge_a8c90288f66768884f42b0588055eb4bf}\label{class_half_edge_a8c90288f66768884f42b0588055eb4bf}} 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{class_half_edge_a8c90288f66768884f42b0588055eb4bf}{origin}}
+\begin{DoxyCompactList}\small\item\em Pointer to the origin vertex of the half edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_half_edge_a37e7696a7131767a0c76e45ed69be4c5}\label{class_half_edge_a37e7696a7131767a0c76e45ed69be4c5}} 
+\mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{class_half_edge_a37e7696a7131767a0c76e45ed69be4c5}{twin}}
+\begin{DoxyCompactList}\small\item\em Pointer to the twin half edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_half_edge_a5918db069bb8b4a89e471c01a14fc6e1}\label{class_half_edge_a5918db069bb8b4a89e471c01a14fc6e1}} 
+\mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{class_half_edge_a5918db069bb8b4a89e471c01a14fc6e1}{next}}
+\begin{DoxyCompactList}\small\item\em Pointer to the next half edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_half_edge_a02bbf630ad01fd4d7bf4af38e286844e}\label{class_half_edge_a02bbf630ad01fd4d7bf4af38e286844e}} 
+\mbox{\hyperlink{class_half_edge}{Half\+Edge}} $\ast$ \mbox{\hyperlink{class_half_edge_a02bbf630ad01fd4d7bf4af38e286844e}{prev}}
+\begin{DoxyCompactList}\small\item\em Pointer to previous half edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_half_edge_ab6093e78646e0a80c94c0a17858484d4}\label{class_half_edge_ab6093e78646e0a80c94c0a17858484d4}} 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ \mbox{\hyperlink{class_half_edge_ab6093e78646e0a80c94c0a17858484d4}{edge}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_edge}{Edge}} to which \mbox{\hyperlink{class_half_edge}{Half\+Edge}} belongs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_half_edge_a0356a514b584b76bc37b8486f1995d01}\label{class_half_edge_a0356a514b584b76bc37b8486f1995d01}} 
+int \mbox{\hyperlink{class_half_edge_a0356a514b584b76bc37b8486f1995d01}{index}}
+\begin{DoxyCompactList}\small\item\em Index of the \mbox{\hyperlink{class_half_edge}{Half\+Edge}} in \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Half-\/\+Edge Class for \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_half_edge_a9694f1dbddb8e3017ab75f5156d11da3}\label{class_half_edge_a9694f1dbddb8e3017ab75f5156d11da3}} 
+\index{HalfEdge@{HalfEdge}!HalfEdge@{HalfEdge}}
+\index{HalfEdge@{HalfEdge}!HalfEdge@{HalfEdge}}
+\doxysubsubsection{\texorpdfstring{HalfEdge()}{HalfEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Half\+Edge\+::\+Half\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor \mbox{\Hypertarget{class_half_edge_a78a1113db76737e8bbfd7dbcfcfbbd99}\label{class_half_edge_a78a1113db76737e8bbfd7dbcfcfbbd99}} 
+\index{HalfEdge@{HalfEdge}!HalfEdge@{HalfEdge}}
+\index{HalfEdge@{HalfEdge}!HalfEdge@{HalfEdge}}
+\doxysubsubsection{\texorpdfstring{HalfEdge()}{HalfEdge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Half\+Edge\+::\+Half\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{origin }\end{DoxyParamCaption})}
+
+Constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & Any incident edge of the face \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_d_c_e_l_8hpp}{D\+C\+E\+L.\+hpp}}\item 
+src/\mbox{\hyperlink{_d_c_e_l_8cpp}{D\+C\+E\+L.\+cpp}}\end{DoxyCompactItemize}

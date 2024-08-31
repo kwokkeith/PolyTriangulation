@@ -1,0 +1,65 @@
+\hypertarget{_d_c_e_l_8hpp}{}\doxysection{src/\+D\+C\+EL.hpp File Reference}
+\label{_d_c_e_l_8hpp}\index{src/DCEL.hpp@{src/DCEL.hpp}}
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_vertex}{Vertex}}
+\item 
+class \mbox{\hyperlink{class_half_edge}{Half\+Edge}}
+\item 
+class \mbox{\hyperlink{class_edge}{Edge}}
+\item 
+class \mbox{\hyperlink{class_face}{Face}}
+\item 
+class \mbox{\hyperlink{class_d_c_e_l}{D\+C\+EL}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}{Vertex\+Type}} \{ \newline
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a13d000b4d7dc70d90239b7430d1eb6b2}{S\+T\+A\+RT}}, 
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0adc6f24fd6915a3f2786a1b7045406924}{E\+ND}}, 
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a7cf1f5924560c2c48f72f6e1a462e9c9}{S\+P\+L\+IT}}, 
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a2fafc535b57c03cd67b907e45141d20d}{M\+E\+R\+GE}}, 
+\newline
+\mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0afc488491175a6dac9e5881e363ad4c41}{R\+E\+G\+U\+L\+AR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum type for the type of vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}} 
+\index{DCEL.hpp@{DCEL.hpp}!VertexType@{VertexType}}
+\index{VertexType@{VertexType}!DCEL.hpp@{DCEL.hpp}}
+\doxysubsubsection{\texorpdfstring{VertexType}{VertexType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0}{Vertex\+Type}}}
+
+
+
+Enum type for the type of vertex. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START@{START}!DCEL.hpp@{DCEL.hpp}}\index{DCEL.hpp@{DCEL.hpp}!START@{START}}}\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a13d000b4d7dc70d90239b7430d1eb6b2}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a13d000b4d7dc70d90239b7430d1eb6b2}} 
+S\+T\+A\+RT&Start \mbox{\hyperlink{class_vertex}{Vertex}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END@{END}!DCEL.hpp@{DCEL.hpp}}\index{DCEL.hpp@{DCEL.hpp}!END@{END}}}\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0adc6f24fd6915a3f2786a1b7045406924}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0adc6f24fd6915a3f2786a1b7045406924}} 
+E\+ND&End \mbox{\hyperlink{class_vertex}{Vertex}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPLIT@{SPLIT}!DCEL.hpp@{DCEL.hpp}}\index{DCEL.hpp@{DCEL.hpp}!SPLIT@{SPLIT}}}\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a7cf1f5924560c2c48f72f6e1a462e9c9}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a7cf1f5924560c2c48f72f6e1a462e9c9}} 
+S\+P\+L\+IT&Split \mbox{\hyperlink{class_vertex}{Vertex}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MERGE@{MERGE}!DCEL.hpp@{DCEL.hpp}}\index{DCEL.hpp@{DCEL.hpp}!MERGE@{MERGE}}}\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a2fafc535b57c03cd67b907e45141d20d}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0a2fafc535b57c03cd67b907e45141d20d}} 
+M\+E\+R\+GE&Merge \mbox{\hyperlink{class_vertex}{Vertex}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REGULAR@{REGULAR}!DCEL.hpp@{DCEL.hpp}}\index{DCEL.hpp@{DCEL.hpp}!REGULAR@{REGULAR}}}\mbox{\Hypertarget{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0afc488491175a6dac9e5881e363ad4c41}\label{_d_c_e_l_8hpp_afa099a55c5746eff5a0e1ffc04f53cc0afc488491175a6dac9e5881e363ad4c41}} 
+R\+E\+G\+U\+L\+AR&Regular \mbox{\hyperlink{class_vertex}{Vertex}}. \\
+\hline
+
+\end{DoxyEnumFields}
