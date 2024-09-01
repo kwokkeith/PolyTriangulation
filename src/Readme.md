@@ -21,3 +21,5 @@ To use the driver code (test.cpp)
 - might need to use bigger stack size (using ulimit -s unlimited in linux)
 - output of edges of form v1, v2 is in outx.txt in tests folder
 - plot.py plots the results (run plot.py and enter test number (1-5))
+
+You can also use 'make' to compile the project using the Makefile in the project's root directory.
