@@ -18,9 +18,9 @@ const int MAX_N = 2e5 + 5;
 int32_t main() {
     int testnumber = 2;
     cin >> testnumber;
-    ifstream fin("../tests/in" + to_string(testnumber) + ".txt");
-    ofstream fout("../tests/out" + to_string(testnumber) + ".txt");
-    ofstream mout("../tests/mout" + to_string(testnumber) + ".txt");
+    ifstream fin("./tests/in" + to_string(testnumber) + ".txt");
+    ofstream fout("./tests/out" + to_string(testnumber) + ".txt");
+    ofstream mout("./tests/mout" + to_string(testnumber) + ".txt");
 
     auto allstart = std::chrono::high_resolution_clock::now();
     auto start = std::chrono::high_resolution_clock::now();
@@ -54,7 +54,7 @@ int32_t main() {
     if (getVertexType(ep, dcel) == SPLIT) {
         reverse(arr.begin(), arr.end());
         dcel = DCEL(arr);
-        ofstream rout("../tests/in" + to_string(testnumber) + ".txt");
+        ofstream rout("./tests/in" + to_string(testnumber) + ".txt");
         rout << n << "\n";
         for (int i = 0; i < n; i++) {
             rout << arr[i].x << " " << arr[i].y << "\n";

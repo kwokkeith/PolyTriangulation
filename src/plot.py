@@ -51,6 +51,7 @@ for i in range(m):
 
 f.close()
 
+# Plot the original points with distinct points from another file
 plot4 = plt.figure(4)
 f = open("../tests/out" + test_number + ".txt", "r")
 m = int(f.readline())
@@ -59,7 +60,17 @@ for i in range(m):
     xvals = [points[a][0], points[b][0]]
     yvals = [points[a][1], points[b][1]]
     plt.plot(xvals, yvals)
-
 f.close()
+
+# Plot the guard positions received from ArtGallery.py
+guard_positions = "../tests/guard_position.txt"
+f = open(guard_positions, "r")
+distinct_points = []
+for line in f:
+    x, y = map(float, line.split())
+    distinct_points.append([x, y])
+    plt.plot(x, y, 'ro')  # 'ro' plots a red circle at each distinct point
+f.close()
+
 
 plt.show()
