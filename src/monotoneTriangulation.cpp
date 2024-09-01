@@ -4,9 +4,14 @@
 #include <algorithm>
 #include <iostream>
 #include <stack>
+#include <fstream>
+
+#define TRIANGLE_EXPORT_FILE "../tests/triangles.txt"
 
 DCEL monotoneTriangulation(DCEL &dcel) {
     int n = dcel.faces.size();
+    std::vector<std::array<Point, 3>> triangles;  // Store the triangles
+
     std::vector<std::pair<int, int> > diagonals;
     for (int i = 1; i < n; i++) {
         faceTriangulation(dcel.faces[i], dcel, diagonals);
@@ -23,6 +28,58 @@ DCEL monotoneTriangulation(DCEL &dcel) {
         new_edges.push_back(it);
     }
     DCEL new_dcel = DCEL(new_points, new_edges);
+
+
+    // TODO: Convert DCEL to triangle
+    // Convert DCEL to triangles using edges
+    
+    // face[0] is outer boundary
+    for (size_t i = 1; i < new_dcel.faces.size(); ++i) {  
+        Face &face = new_dcel.faces[i];
+
+        HalfEdge *start = face.half_edge;
+        HalfEdge *curr = start;
+
+        std::array<Point, 3> triangle;
+        int j = 0;
+
+        // Traverse the half-edges of the face to collect vertices in the correct order
+        do {
+            triangle[j] = new_dcel.vertices[curr->origin->index].point;
+            j++;
+            curr = curr->next;
+        } while (curr != start && j < 3);
+
+        // Ensure we have exactly 3 vertices and check for degenerate triangles
+        if (j == 3) {
+            if (!(triangle[0].x == triangle[1].x && triangle[0].y == triangle[1].y) &&
+                !(triangle[1].x == triangle[2].x && triangle[1].y == triangle[2].y) &&
+                !(triangle[0].x == triangle[2].x && triangle[0].y == triangle[2].y)) {
+                triangles.push_back(triangle);
+            } else {
+                std::cerr << "Skipping degenerate triangle: (" 
+                          << triangle[0].x << "," << triangle[0].y << "), ("
+                          << triangle[1].x << "," << triangle[1].y << "), ("
+                          << triangle[2].x << "," << triangle[2].y << ")\n";
+            }
+        } else {
+            std::cerr << "Error: Face does not form a valid triangle.\n";
+        }
+    }
+
+   // Export the triangle vertices into a file
+    std::ofstream out_triangle(TRIANGLE_EXPORT_FILE);
+    if (out_triangle.is_open()) {
+        for (const auto &triangle : triangles) {
+            out_triangle << triangle[0].x << "," << triangle[0].y 
+                         << " " << triangle[1].x << "," << triangle[1].y 
+                         << " " << triangle[2].x << "," << triangle[2].y << std::endl;
+        }
+        out_triangle.close();  // Ensure file is closed after writing
+    } else {
+        std::cerr << "Error: Unable to open file " << TRIANGLE_EXPORT_FILE << std::endl;
+    }
+
     return new_dcel;
 }
 

@@ -1,6 +1,7 @@
 /** @file */
 
 #include "makeMonotone.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <queue>
 #include <set>
